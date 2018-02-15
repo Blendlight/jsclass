@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <!--<button onclick="change(1)">On</button>
+<button onclick="change(0)">Off</button>-->
+
+        <button onclick="toggle(this)">On</button>
+       
+       
+        <img id="img" src="off.jpg" width="300px" height="300px" alt="">
+        
+        <script>
+
+            var img = document.getElementById("img");
+            var state = 0;
+
+            /*function on()
+            {
+                img.src = "on.jpg";
+            }
+
+            function off()
+            {
+                img.src = "off.jpg";
+            }*/
+
+            /*function change(s)
+            {
+                if(s==1)
+                {
+                    img.src = "on.jpg";
+                }else
+                {
+                    img.src = "off.jpg";
+                }  
+            }*/
+
+            function toggle(btn)
+            {
+                //    -------      this
+                if(state==0)
+                {
+                    img.src = "on.jpg";
+                    btn.innerHTML = "OFF";
+                    state = 1;
+                }else
+                {
+                    img.src = "off.jpg";
+                    btn.innerHTML = "ON";
+                    state = 0;
+                } 
+            }
+
+        </script>
+    </body>
+</html>

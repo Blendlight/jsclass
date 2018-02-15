@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="http://localhost/libraries/bootstrap/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img onclick="show(this)"  class='img-responsive' src="image/1.jpg" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <img onclick="show(this)" class='img-responsive' src="image/2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img onclick="show(this)" class='img-responsive' src="image/3.jpg" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <img onclick="show(this)" class='img-responsive' src="image/4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                var img =  document.getElementById("result");
+                function show(pic)
+                {
+                    img.src = pic.src;
+                }
+            </script>
+        </div>
+    </body>
+</html>

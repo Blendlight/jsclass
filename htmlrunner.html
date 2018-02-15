@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="http://localhost/libraries/bootstrap/css/bootstrap.min.css">
+    </head>
+    <body>
+       
+        <br> <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <textarea onkeydown="showhtml()" class='form-control' id="inp" cols="30" rows="10"></textarea>
+                </div>
+                <div class="col-md-6">
+                    <div id="result"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var inp = document.getElementById('inp');
+            var result = document.getElementById('result');
+
+            function showhtml()
+            {
+                var val = inp.value;
+
+                result.innerHTML = val; 
+            }
+        </script>
+    </body>
+</html>

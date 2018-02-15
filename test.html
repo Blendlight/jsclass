@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+        <img src="off.jpg" id="bulb" width="300px" height="300px" alt="">
+
+        <img src=""   id="user" alt="">
+
+        <!--<button onclick="change(1)">ON</button>
+<button onclick="change(0)">OFF</button>-->
+
+        <button onclick="toggle(this)">on</button>
+
+        <script>
+
+            var img = document.getElementById("bulb");
+            var state = 0;
+
+            /*function change(state)
+            {
+                if(state==1)
+                {
+                    img.src = "on.jpg";
+                }
+                else
+                {
+                    img.src = "off.jpg";
+                }
+            }*/
+
+
+            function toggle(btn)
+            {
+                if(state==0)
+                {
+                    img.src = "off.jpg";
+                    btn.innerHTML  = "ON";
+                    state =  1;
+                }else
+                {
+                    img.src = "on.jpg";
+                    btn.innerHTML  = "OFF";
+                    state =  0;
+                }
+
+            }
+
+        </script>
+
+    </body>
+</html>
