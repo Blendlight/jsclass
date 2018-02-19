@@ -11,7 +11,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <textarea onkeydown="showhtml()" class='form-control' id="inp" cols="30" rows="10"></textarea>
+                    <textarea oninput="showhtml()" class='form-control' id="inp" cols="30" rows="10"></textarea>
                 </div>
                 <div class="col-md-6">
                     <div id="result"></div>
@@ -19,6 +19,7 @@
             </div>
         </div>
         <script>
+            
             var inp = document.getElementById('inp');
             var result = document.getElementById('result');
 

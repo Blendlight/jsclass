@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            #up
+            {
+                width: 100px;
+                height: 100px;
+                background:red;
+                border-radius: 50%;
+                position: absolute;
+                right: 10px;
+                top: 100px;
+                transition: linear .5s;
+            }
+
+            #text
+            {
+            }
+        </style>
+    </head>
+    <body>
+        <div id="text"></div>
+        <div id="up">
+
+        </div>
+
+        <script>
+
+            var tb = document.getElementById("text");
+            var up = document.getElementById("up");
+
+            for(i =0;i<100;i++)
+            {
+                tb.innerHTML += "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita eligendi noman et placeat enim ad quisquam, esse quod obcaecati architecto incidunt sint numquam eos? Dolor itaque aliquam mollitia reiciendis officiis.";
+            }
+
+
+            window.onscroll = function()
+            {
+                var sy = window.scrollY;
+                up.style.top = sy+100+"px";
+            }
+
+
+
+        </script>
+
+
+    </body>
+</html>
