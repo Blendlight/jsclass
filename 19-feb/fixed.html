@@ -29,19 +29,28 @@
 
         <script>
 
+
+            //get the html elmement by id
             var tb = document.getElementById("text");
             var up = document.getElementById("up");
 
             for(i =0;i<100;i++)
             {
+                //change inner html
                 tb.innerHTML += "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita eligendi noman et placeat enim ad quisquam, esse quod obcaecati architecto incidunt sint numquam eos? Dolor itaque aliquam mollitia reiciendis officiis.";
             }
 
-
+            //che kala kala window scroll shi no da oka 
             window.onscroll = function()
             {
+
                 var sy = window.scrollY;
-                up.style.top = sy+100+"px";
+                if(sy < 1718){
+                    up.innerHTML = sy;
+                    up.style.top = sy+100+"px";
+                }
+
+
             }
 
 

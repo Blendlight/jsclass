@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <input type="text" id="inp"/>
+        <button id="btn">Add</button>
+
+        <ul id="list">
+            <li>Home work</li>
+            <li>Class work</li>
+            <li>Task</li>
+        </ul>
+
+        <script>
+            var input = document.querySelector("#inp");
+            var btn = document.querySelector("#btn");
+            var list = document.querySelector("#list");
+
+            btn.onclick = function()
+            {
+
+                var val = input.value;
+
+                if(val == "")
+                {
+                    alert("please fill the box");
+                }
+                else
+                {
+
+                    var found = false;
+
+                    var li = document.querySelectorAll("#list li");
+
+                    for(i=0;i<li.length;i++)
+                    {
+
+                        //convert the value text list item to uppercase 
+                        //used for caseinsensitive comparison 
+                        var valSmall = val.toLowerCase();
+                        var liSmall = li[i].innerHTML.toLowerCase();
+
+                        if( valSmall== liSmall)
+                        {
+                            found = true;
+                        }
+                    }
+
+                    if(found == true){
+                        alert("Already in list");
+                    }else
+                    {
+                        var l = "<li>"+val+"</li>";
+                        input.value = "";
+                        list.innerHTML += l;
+
+                    }
+
+
+                }
+
+            }
+
+
+        </script>
+
+    </body>
+</html>

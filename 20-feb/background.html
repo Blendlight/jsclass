@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <input type="text" id="inp" />
+        <div id="d1">
+            asklfjlaskdfjklasdjfkladsj
+            asdflkasjdflkjasdklfsl
+            asdlfkasldkfjk       
+        </div>
+
+        <script>
+            var input = document.getElementById("inp");
+            var div1 = document.getElementById("d1");
+            
+            input.oninput = function()
+            {
+                var val = input.value;
+                div1.style.color = val;
+                
+            }
+            
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+
+        <ul class="nav">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+
+        <ul>
+            <li>Hello world0</li>
+            <li>Hello world1</li>
+            <li>Hello world2</li>
+        </ul>
+
+        <ol class="nav">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ol>
+
+        <ul class="nav">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+
+        <script>
+            // Select elements by css query
+            //document.querySelector('sel')    single just first one
+            //document.querySelectorAll('sel') for all elements
+            //            ul.nav li
+            var nav = document.querySelectorAll('ul.nav li');
+
+            for(i=0;i<nav.length;i++)
+            {
+                nav[i].style.color = "red";
+            }
+
+        </script>
+
+    </body>
+</html>
