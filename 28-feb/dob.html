@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 id="result"></h1>
+        <h1 id="result2"></h1>
+        <h1 id="result3"></h1>
+        <h1 id="result4"></h1>
+
+        <script>
+
+            function calcDob(date, ele, msg='')
+            {
+                //get current date time
+                current = new Date();
+                //get dob date time
+                dob = new Date(date);
+                //get unix seconds of dob
+                dobSeconds = dob.getTime();
+                //get unix seconds of current time
+                currentSeconds = current.getTime();
+                
+                //find diff between the two dates
+                diff = currentSeconds - dobSeconds;
+                
+                //convert diff to seconds 
+                //diff is in milliseconds
+                sec = diff/1000;
+            
+                minutes = sec/60;
+                hours = minutes/60;
+                days = hours/24;
+                
+                year = Math.floor(days/365);
+                
+                s2 = Math.floor(sec%60);
+                m2 = Math.floor(minutes%60);
+                h2 = Math.floor(hours%24);
+                d2 = Math.floor(days%365);
+                
+                document.getElementById(ele).innerHTML = (d2+" days "+year+" years  "+h2+":"+m2+":"+s2+" "+msg);
+            }
+
+            setInterval(function(){
+                calcDob('6 apr 1995', 'result', " Zohaib age");
+                calcDob('15 feb 1997', 'result2', " Moin age");
+                calcDob('24 sep 1990', 'result3', " Umair age");
+                calcDob('22 jan 1993', 'result4', " zahid age");
+            }, 1000);
+            
+        </script>
+
+    </body>
+</html>

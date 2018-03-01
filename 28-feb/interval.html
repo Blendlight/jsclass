@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            .marquee-container
+            {
+                overflow: hidden;
+                width: 100%;
+                background: black;
+            }
+
+            .marquee 
+            {
+                width: 1000px;
+                color: orange;
+                padding: 10px;
+                position: relative;
+                left:0px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="marquee-container">
+            <div class="marquee" id="m1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, repellendus, illum labore quaerat accusamus non at earum natus deleniti ka
+            </div>
+        </div>
+
+        <script>
+
+            var m1 = document.getElementById("m1");
+
+            m1.style.left = "0px";
+            var speed = 10;
+            var bbox = m1.getBoundingClientRect();
+            var width = bbox.width;
+
+
+            var dir = -1;
+
+            setInterval(function(){
+                //left   
+                var left = parseInt( m1.style.left);
+                if(left <= -width && dir == -1)
+                {
+
+                    //                    var leftNew = 0;
+                    dir = 1;
+                }else
+                {
+                    var leftNew = left + (speed*dir);
+
+                }
+
+                m1.style.left = leftNew+"px";
+
+
+
+
+            }, 1000/24);
+        </script>
+
+    </body>
+</html>

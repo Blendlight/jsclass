@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   
+   
+   <div id="d1">
+       hello world
+   </div>
+   <button onclick="fn(this)">Click</button>
+    
+    <script>
+        /*
+        
+        1 hour = 60minutes
+        1 minute = 60seconds
+        1second = 1000 miliseconds
+
+        time will be in milliseconds
+        1000 miliseconds = 1 second
+        window.setTimeout(fn, time); call the function fn after time nanoseconds only one time
+        window.setInterval(fn, time); call the functoin fn after every time nanoseconds
+        */
+        
+        /*setTimeout(function(){
+            alert('hello world');
+        }, 2000);*/
+        
+        /*setTimeout(sayHello, 3000);
+        
+        function sayHello()
+        {
+            alert("Hello world");
+        }*/
+        
+        
+        /*var i = 0;
+        
+        
+        function fn(btn)
+        {
+            btn.style.display = "none";
+            var d1 = document.getElementById("d1");
+            setTimeout(function(){
+                d1.innerHTML = i;
+                btn.style.display = "";
+                i++;
+            }, 500);
+            
+        }*/
+        
+    </script>
+    
+</body>
+</html>
